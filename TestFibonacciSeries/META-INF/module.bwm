@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_sDFMQK6eEe21v81sDGCXVA" targetNamespace="http://tns.tibco.com/bw/composite/TestFibonacciSeries" name="TestFibonacciSeries" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Js3Uka6fEe21v81sDGCXVA" name="Enique-FibonacciCustomFunction" promote="ComponentProcess/Enique-FibonacciCustomFunction">
+    <sca:interface.wsdl xmi:id="_JtAegq6fEe21v81sDGCXVA" interface="http://xmlns.example.com/20230217141014PLT#wsdl.interface(Enique-FibonacciCustomFunction)" scaext:wsdlLocation="../Processes/testfibonacciseries/Fibo.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_JtTZcK6fEe21v81sDGCXVA" name="RestService" path="/Enique/FibonacciCustomFunction" docBasePath="http://localhost:7777/TestFibonacciSeries" docResourcePath="Resource" basePath="/" connector="testfibonacciseries.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/testfibonacciseries.Fibo-Resource.json">
+      <operation xmi:id="_JtdKcK6fEe21v81sDGCXVA" operationName="get" nickname="get-Enique-FibonacciCustomFunction" httpMethod="GET" notes="getResource" responseStyle="element" outputPartName="item">
+        <parameters xmi:id="_UFCpUK6fEe21v81sDGCXVA">
+          <parameterMapping xmi:id="_UFCpUa6fEe21v81sDGCXVA" parameterName="Input" parameterType="Query" dataType="integer#int32"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_JxiZMK6fEe21v81sDGCXVA"/>
+      <advancedConfig xmi:id="_JtTZca6fEe21v81sDGCXVA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_JtdKca6fEe21v81sDGCXVA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_uricQK6eEe21v81sDGCXVA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ur4agK6eEe21v81sDGCXVA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ur_IMK6eEe21v81sDGCXVA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_usNxsK6eEe21v81sDGCXVA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_usUfYK6eEe21v81sDGCXVA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_usZ-8K6eEe21v81sDGCXVA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_usgFkK6eEe21v81sDGCXVA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uspPgK6eEe21v81sDGCXVA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_usznkK6eEe21v81sDGCXVA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_bozVsK6fEe21v81sDGCXVA" name="/HTTPCONNECTION/HOST" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_b8bcUK6fEe21v81sDGCXVA" name="/HTTPCONNECTION/PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_tLipIK6eEe21v81sDGCXVA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tLipIa6eEe21v81sDGCXVA" processName="testfibonacciseries.Fibo"/>
+    <sca:service xmi:id="_JstjkK6fEe21v81sDGCXVA" name="Enique-FibonacciCustomFunction">
+      <sca:interface.wsdl xmi:id="_Js3UkK6fEe21v81sDGCXVA" interface="http://xmlns.example.com/20230217141014PLT#wsdl.interface(Enique-FibonacciCustomFunction)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

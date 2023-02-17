@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/FibonacciSeries" xmlns:tns="http://www.example.org/FibonacciSeries" elementFormDefault="qualified">
+
+    <element name="FibonacciReq" type="tns:FibonacciReqType"></element>
+    
+    <complexType name="FibonacciReqType">
+    	<sequence>
+    		<element name="Input" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="FibonacciRes" type="tns:FibonacciResType"></element>
+    
+    <complexType name="FibonacciResType">
+    	<sequence>
+    		<element name="Output" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/testfibonacciseries.Fibo-Resource.json",
+        "type": "generated"
+    }]
+}

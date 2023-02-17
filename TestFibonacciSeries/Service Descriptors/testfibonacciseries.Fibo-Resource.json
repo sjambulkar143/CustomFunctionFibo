@@ -1,0 +1,49 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Resource",
+    "description" : "Resource service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/Enique/FibonacciCustomFunction" : {
+      "get" : {
+        "summary" : "getResource",
+        "description" : "getResource",
+        "operationId" : "get-Enique-FibonacciCustomFunction",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Input",
+          "in" : "query",
+          "description" : "",
+          "type" : "integer",
+          "format" : "int32",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a FibonacciRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/FibonacciRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "FibonacciRes" : {
+      "type" : "object",
+      "required" : [ "Output" ],
+      "properties" : {
+        "Output" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

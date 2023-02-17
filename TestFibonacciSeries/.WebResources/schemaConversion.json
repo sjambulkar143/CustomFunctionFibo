@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/TestFibonacciSeries/Service Descriptors/testfibonacciseries.Fibo-Resource.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.org/FibonacciSeries"
+}]}

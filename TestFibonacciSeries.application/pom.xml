@@ -34,7 +34,7 @@
     <domainDesc></domainDesc>
     <keystorePassword></keystorePassword>
     <bw.Home>\bw\6.8</bw.Home>
-    <httpPort>50200</httpPort>
+    <httpPort>6021</httpPort>
     <profile>default.substvar</profile>
     <restartAppNode>false</restartAppNode>
     <appNode>TestFibonacciSeries-AppNode</appNode>

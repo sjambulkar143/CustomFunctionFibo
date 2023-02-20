@@ -20,7 +20,7 @@
     <externalProfileLoc></externalProfileLoc>
     <truststorePassword></truststorePassword>
     <agentUsername></agentUsername>
-    <appSpace>TestFibonacciSeries-AppSpace</appSpace>
+    <appSpace>FibonacciSeries-AppSpace</appSpace>
     <agentSSL>false</agentSSL>
     <backupLocation></backupLocation>
     <earUploadPath></earUploadPath>
@@ -37,11 +37,11 @@
     <httpPort>6021</httpPort>
     <profile>default.substvar</profile>
     <restartAppNode>false</restartAppNode>
-    <appNode>TestFibonacciSeries-AppNode</appNode>
+    <appNode>FibonacciSeries-AppNode</appNode>
     <failIfNoTests>false</failIfNoTests>
     <truststorePath></truststorePath>
     <keystorePath></keystorePath>
-    <domain>UpdateTestFibonacciSeries-Domain</domain>
+    <domain>FibonacciSeries-Domain</domain>
     <agentPort>8079</agentPort>
     <tibco.Home>C:\Bw6_Home</tibco.Home>
   </properties>

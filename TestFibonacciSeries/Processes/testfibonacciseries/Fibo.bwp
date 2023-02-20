@@ -11,20 +11,6 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="Output">
-            <endingVariables>
-                <variable>Output-input</variable>
-                <variable>FibonacciInput</variable>
-            </endingVariables>
-        </task>
-        <task name="FibonacciInput">
-            <endingVariables>
-                <variable>FibonacciInput-input</variable>
-                <variable>get</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -788,7 +774,7 @@
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/FibonacciSeries&quot; xmlns:src=&quot;http://www.fibonacci.com&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;get&quot;/>&lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&lt;tns:FibonacciReq>&lt;tns:Input>&lt;xsl:value-of select=&quot;src:FiboCustomFun($get/parameters/tns1:Enique-FibonacciCustomFunctionGetParameters/tns1:Input)&quot;/>&lt;/tns:Input>&lt;/tns:FibonacciReq>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/FibonacciSeries&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; xmlns:src=&quot;http://www.fibonacci.com&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;get&quot;/>&lt;xsl:template name=&quot;FibonacciInput-input&quot; match=&quot;/&quot;>&lt;tns:FibonacciReq>&lt;tns:Input>&lt;xsl:value-of select=&quot;src:FiboCustomFun($get/parameters/tns1:Enique-FibonacciCustomFunctionGetParameters/tns1:Input)&quot;/>&lt;/tns:Input>&lt;/tns:FibonacciReq>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="FibonacciInput-input"
                                     name="FibonacciInput"
@@ -802,7 +788,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/FibonacciSeries&quot; xmlns:src=&quot;http://www.fibonacci.com&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:FibonacciReq>&#xa;            &lt;tns:Input>&#xa;                &lt;xsl:value-of select=&quot;src:FiboCustomFun($get.parameters/tns1:Input)&quot;/>&#xa;            &lt;/tns:Input>&#xa;        &lt;/tns:FibonacciReq>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/FibonacciSeries&quot; xmlns:tns1=&quot;http://xmlns.example.com/Resource/parameters&quot; xmlns:src=&quot;http://www.fibonacci.com&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;FibonacciInput-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:FibonacciReq>&#xa;            &lt;tns:Input>&#xa;                &lt;xsl:value-of select=&quot;src:FiboCustomFun($get.parameters/tns1:Input)&quot;/>&#xa;            &lt;/tns:Input>&#xa;        &lt;/tns:FibonacciReq>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
